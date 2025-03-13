@@ -1,0 +1,126 @@
+﻿
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117830668-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-117830668-1');
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 这一条针对IE。使用IE最高版本渲染页面 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <link rel="shortcut icon" href="/static/favicon.ico">
+    <!--[if IE 9]>
+    <link rel="stylesheet" href="/static/css/styles-ie.css">
+    <![endif]-->
+
+    <link rel="stylesheet" href="static/css/styles.css">
+
+</head>
+
+<body>
+	<div id="loading"></div>
+	<!--主页-->
+	<div class="container">
+        <header class="page-header">
+    <!--顶部主标题-->
+    <h1 class="lab-title"><a class="index-link" href="">The Sun Group</a></h1>
+    <button id="hamburger" data-bind="click: toggleNav"></button>
+    <div class="clearboth"></div>
+    <!--导航栏-->
+
+
+
+<ul class="navigation" data-bind="css: {open: navStatus() > 0}">
+
+    <li class="nav-li">
+        <a href="index.html" class="navlist-item ">Home</a>
+    </li>
+
+    <li class="nav-li">
+        <a href="research.html" class="navlist-item ">Research</a>
+    </li>
+
+    <li class="nav-li">
+        <a href="people.html" class="navlist-item ">People</a>
+    </li>
+
+    <li class="nav-li">
+        <a href="publications.html" class="navlist-item ">Publications</a>
+    </li>
+
+    <li class="nav-li">
+        <a href="code.html" class="navlist-item ">Code</a>
+    </li>
+
+    <li class="nav-li">
+        <a href="" class="navlist-item nav-active">News</a>
+    </li>
+
+</ul>
+</header>
+        <!--正文部分-->
+        <section class="main-content people-main-content">
+            <article class="card boss"></article>
+
+            <div class="clearboth"></div>
+            <article class="card">
+                <h5 class="degree">2024-12-13 Paper News</h5>
+                <h4 class="degree">Professor Sun Jian’s team predicts quasi-two-dimensional spin Pells phase transition in potassium ammonium compounds.     <a href="https://physics.nju.edu.cn/xwdt/xwdtyjcgbdzdhdhj/20241213/i305731.html">Link</a></h4>
+                <div class="image-container">
+                    <img style="width: 45%" src="static/image/news1-1.png">
+                    <img style="width: 45%" src="static/image/news1-2.png">
+                  </div>
+            </article>
+
+            <div class="clearboth"></div>
+            <article class="card">
+                <h5 class="degree">2024-09-30 Paper News</h5>
+                <h4 class="degree">Professor Sun Jian’s team used MAGUS to predict novelty two-dimensional materials of M4XY2 family.     <a href="https://physics.nju.edu.cn/xwdt/xwdtyjcgbdzdhdhj/20240930/i297158.html">Link</a></h4>
+                <div class="image-container">
+                    <img style="width: 40%" src="static/image/news2-1.png">
+                    <img style="width: 55%" src="static/image/news2-2.png">
+                  </div>
+            </article>
+
+            <div class="clearboth"></div>
+            <article class="card">
+                <h5 class="degree">2024-09-06 Paper News</h5>
+                <h4 class="degree">Professor Sun Jian’s team released high-precision message transmission machine learning force field HotPP.     <a href="https://physics.nju.edu.cn/xwdt/xwdtyjcgbdzdhdhj/20240906/i284384.html">Link</a></h4>
+
+                <div class="image-container">
+                    <img style="width: 55%" src="static/image/news3-1.png">
+                    <img style="width: 40%" src="static/image/news3-2.png">
+                  </div>
+            </article>
+
+
+        </section>
+        <div class="clearboth"></div>
+    <!--底部-->
+    <footer class="page-footer">
+        <p class="address">No.22 Hankou Road, Nanjing 210093, China.</p>
+        <p class="address">Tel: +86-(0)25-83687822</p>
+        <p class="address">Fax: +86-(0)25-83595535</p>
+        <p class="address">Email: jiansun@nju.edu.cn</p>
+    </footer>
+<button id="go-top"></button>
+
+</div>
+
+
+    <script src="static/js/jquery-3.1.0.min.js"></script>
+    <script src="static/js/knockout-3.4.0.js"></script>
+    <script src="static/js/ko-news.js"></script>
+    <script src="static/js/basic.js"></script>
+
+</body>
+</html>

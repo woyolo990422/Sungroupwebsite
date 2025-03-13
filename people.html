@@ -1,0 +1,390 @@
+﻿
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117830668-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-117830668-1');
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 这一条针对IE。使用IE最高版本渲染页面 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <link rel="shortcut icon" href="/static/favicon.ico">
+    <!--[if IE 9]>
+    <link rel="stylesheet" href="/static/css/styles-ie.css">
+    <![endif]-->
+
+    <link rel="stylesheet" href="static/css/styles.css">
+
+</head>
+
+<body>
+	<div id="loading"></div>
+	<!--主页-->
+	<div class="container">
+        <header class="page-header">
+    <!--顶部主标题-->
+    <h1 class="lab-title"><a class="index-link" href="">The Sun Group</a></h1>
+    <button id="hamburger" data-bind="click: toggleNav"></button>
+    <div class="clearboth"></div>
+    <!--导航栏-->
+
+
+
+<ul class="navigation" data-bind="css: {open: navStatus() > 0}">
+
+    <li class="nav-li">
+        <a href="index.html" class="navlist-item ">Home</a>
+    </li>
+
+    <li class="nav-li">
+        <a href="research.html" class="navlist-item ">Research</a>
+    </li>
+
+    <li class="nav-li">
+        <a href="" class="navlist-item nav-active">People</a>
+    </li>
+
+    <li class="nav-li">
+        <a href="publications.html" class="navlist-item ">Publications</a>
+    </li>
+
+    <li class="nav-li">
+        <a href="code.html" class="navlist-item ">Code</a>
+    </li>
+
+    <li class="nav-li">
+        <a href="news.html" class="navlist-item ">News</a>
+    </li>
+
+</ul>
+</header>
+        <!--正文部分-->
+        <section class="main-content people-main-content">
+            <article class="card boss">
+                <div class="boss-info">
+                    <img id="boss-img" src="static/image/pi.jpg" alt="Image of Jian Sun">
+                    <h4 class="boss-name-english">Jian Sun, Prof.</h4>
+                    <h4 class="boss-name-chinese">孙建 教授</h4>
+                </div>
+                <div class="boss-more">
+
+                    <ul class="boss-contact">
+                        <p class="purple bold boss-contact-head">CONTACT</p>
+                        <li class="boss-contact-item">University Professor</li>
+                        <li class="boss-contact-item">
+                            <a class="boss-contact-link" href="http://physics.nju.edu.cn/" target="_blank">School of Physics</a>
+                        </li>
+                        <li class="boss-contact-item">
+                            <a class="boss-contact-link" href="http://nju.edu.cn/" target="_blank">Nanjing University</a>
+                        </li>
+                        <li class="boss-contact-item">Tel: +86-(0)25-83687822</li>
+                        <li class="boss-contact-item">Fax: +86-(0)25-83595535</li>
+                        <li class="boss-contact-item">Email: jiansun@nju.edu.cn</li>
+
+
+                        <p class="purple bold boss-contact-head">Honors/Awards:</p>
+
+
+                        <li class="boss-contact-item">Distinguished Young Scholar of National Natural Science Foundation of China (2021)</li>
+                        <li class="boss-contact-item">Distinguished Young Scholar of Jiangsu Province (2015)</li>
+                        <li class="boss-contact-item">GRC Alvin van Valkenburg Award (2014)</li>
+                        <li class="boss-contact-item">“QR Program - Youth” (2013)</li>
+                        <li class="boss-contact-item">Marie Curie Fellowship, EU (2012)</li>
+                        <li class="boss-contact-item">The second prize of China National Natural Science Award (2011, the 5th contributor)</li>
+                        <li class="boss-contact-item">Humboldt Fellowship, Germany (2008)</li>
+                        <li class="boss-contact-item">NSERC Fellowship, Canada (2007)</li>
+
+
+                    </ul>
+
+
+
+                </div>
+
+
+            </article>
+            <div class="clearboth"></div>
+            <article class="card">
+                <h4 class="degree">Group Photo 2025</h4>
+                <img src="static/image/dajiahuo0.jpg">
+            </article>
+
+            <!-- <article class="members card">
+                <h4 class="degree">Associate Professors</h4>
+                <ul class="member-list">
+
+                    <li class="member-item">
+                        <img class="menber-img" alt="lab member" src="static/picture/liuminhao.jpg">
+                        <p class="member-name-english bold purple">Dr. Minhao Liu</p>
+                        <p class="member-name-chinese bold purple">
+                        刘旻昊
+
+                            <span>助理研究员</span>
+
+                        </p>
+                    </li>
+
+                    <li class="member-item">
+                        <img class="menber-img" alt="lab member" src="static/picture/zhourui.jpg">
+                        <p class="member-name-english bold purple">Dr. Rui Zhou</p>
+                        <p class="member-name-chinese bold purple">
+                        周瑞
+
+                            <span>助理研究员</span>
+
+                        </p>
+                    </li>
+
+                    <li class="member-item">
+                        <img class="menber-img" alt="lab member" src="static/picture/wangtingliang.jpg">
+                        <p class="member-name-english bold purple">Dr. Tingliang Wang</p>
+                        <p class="member-name-chinese bold purple">
+                        王廷亮
+
+                            <span>副研究员</span>
+
+                        </p>
+                    </li>
+
+                    <li class="member-item">
+                        <img class="menber-img" alt="lab member" src="static/picture/panxiaojing.jpg">
+                        <p class="member-name-english bold purple">Dr. Xiaojing Pan</p>
+                        <p class="member-name-chinese bold purple">
+                        潘孝敬
+
+                            <span>副研究员</span>
+
+                        </p>
+                    </li>
+
+                </ul>
+                <div class="clearboth"></div>
+            </article> -->
+
+            <article class="members card">
+                <h4 class="degree">Postdoctoral Fellows</h4>
+                <ul class="member-list">
+
+                    <li class="member-item">
+                        <img class="menber-img" alt="lab member" src="static/image/wjj.jpg">
+                        <p class="member-name-english bold purple">Junjie Wang</p>
+                        <p class="member-name-chinese bold purple">
+                        王俊杰
+
+                        </p>
+                    </li>
+
+                    <li class="member-item">
+                        <img class="menber-img" alt="lab member" src="static/image/dc.jpg">
+                        <p class="member-name-english bold purple">Chi Ding</p>
+                        <p class="member-name-chinese bold purple">
+                        丁驰
+
+                        </p>
+                    </li>
+
+                    <li class="member-item">
+                        <img class="menber-img" alt="lab member" src="static/image/wz.jpg">
+                        <p class="member-name-english bold purple">Yu Han</p>
+                        <p class="member-name-chinese bold purple">
+                        韩愈
+
+                        </p>
+                    </li>
+
+                    <li class="member-item">
+                        <img class="menber-img" alt="lab member" src="static/image/hth.jpg">
+                        <p class="member-name-english bold purple">TianHeng Huang</p>
+                        <p class="member-name-chinese bold purple">
+                        黄天衡
+
+                        </p>
+                    </li>
+
+               </ul>
+                <div class="clearboth"></div>
+            </article>
+
+            <article class="members card">
+                <h4 class="degree">Ph.D Candidates</h4>
+                <ul class="member-list">
+
+                    <li class="member-item">
+                        <img class="menber-img" alt="lab member" src="static/image/sjy.jpg">
+                        <p class="member-name-english bold purple">JiuYang Shi</p>
+                        <p class="member-name-chinese bold purple">
+                        施九洋
+
+                        </p>
+                    </li>
+
+                    <li class="member-item">
+                        <img class="menber-img" alt="lab member" src="static/image/psn.jpg">
+                        <p class="member-name-english bold purple">Shuning Pan</p>
+                        <p class="member-name-chinese bold purple">
+                        潘书宁
+
+                        </p>
+                    </li>
+
+                    <li class="member-item">
+                        <img class="menber-img" alt="lab member" src="static/image/lq.jpg">
+                        <p class="member-name-english bold purple">Qing Lu</p>
+                        <p class="member-name-chinese bold purple">
+                        鲁清
+
+                        </p>
+                    </li>
+
+                    <li class="member-item">
+                        <img class="menber-img" alt="lab member" src="static/image/wyl.jpg">
+                        <p class="member-name-english bold purple">Yunlong Wang</p>
+                        <p class="member-name-chinese bold purple">
+                        王云龙
+
+                        </p>
+                    </li>
+
+                    <li class="member-item">
+                        <img class="menber-img" alt="lab member" src="static/image/lzx.jpg">
+                        <p class="member-name-english bold purple">Zhixin Liang</p>
+                        <p class="member-name-chinese bold purple">
+                        梁智新
+
+                        </p>
+                    </li>
+
+                    <li class="member-item">
+                        <img class="menber-img" alt="lab member" src="static/image/jqh.jpg">
+                        <p class="member-name-english bold purple">Qiuhan Jia</p>
+                        <p class="member-name-chinese bold purple">
+                        贾秋涵
+
+                        </p>
+                    </li>
+
+                    <li class="member-item">
+                        <img class="menber-img" alt="lab member" src="static/image/zyj.jpg">
+                        <p class="member-name-english bold purple">Yijie Zhu</p>
+                        <p class="member-name-chinese bold purple">
+                        朱怡杰
+
+                        </p>
+                    </li>
+
+                    <li class="member-item">
+                        <img class="menber-img" alt="lab member" src="static/image/zzw.jpg">
+                        <p class="member-name-english bold purple">Zhongwei Zhang</p>
+                        <p class="member-name-chinese bold purple">
+                        张仲伟
+
+                        </p>
+                    </li>
+
+                    <li class="member-item">
+                        <img class="menber-img" alt="lab member" src="static/image/ysb.jpg">
+                        <p class="member-name-english bold purple">Shaobo Yu</p>
+                        <p class="member-name-chinese bold purple">
+                        于少薄
+
+                        </p>
+                    </li>
+
+                    <li class="member-item">
+                        <img class="menber-img" alt="lab member" src="static/image/wz.jpg">
+                        <p class="member-name-english bold purple">Yujian Pan</p>
+                        <p class="member-name-chinese bold purple">
+                        潘宇箭
+
+                        </p>
+                    </li>
+
+                    <li class="member-item">
+                        <img class="menber-img" alt="lab member" src="static/image/yzy.jpg">
+                        <p class="member-name-english bold purple">Ziyang Yang</p>
+                        <p class="member-name-chinese bold purple">
+                        杨子洋
+
+                        </p>
+                    </li>
+
+                    <li class="member-item">
+                        <img class="menber-img" alt="lab member" src="static/image/wz.jpg">
+                        <p class="member-name-english bold purple">Zhennan Zhang</p>
+                        <p class="member-name-chinese bold purple">
+                        张圳南
+
+                        </p>
+                    </li>
+                    <li class="member-item">
+                        <img class="menber-img" alt="lab member" src="static/image/wz.jpg">
+                        <p class="member-name-english bold purple">Haoting Zhang</p>
+                        <p class="member-name-chinese bold purple">
+                        张皓庭
+
+                        </p>
+                    </li>
+                    <li class="member-item">
+                        <img class="menber-img" alt="lab member" src="static/image/gzy.jpg">
+                        <p class="member-name-english bold purple">Zhiyue Guo</p>
+                        <p class="member-name-chinese bold purple">
+                        郭智岳
+
+                        </p>
+                    </li>
+
+
+
+                </ul>
+                <div class="clearboth"></div>
+            </article>
+
+            <article class="members card">
+                <h4 class="degree">Undergraduate Fellows</h4>
+                <ul class="member-list">
+
+                    <li class="member-item">
+                        <img class="menber-img" alt="lab member" src="static/image/xsz.jpg">
+                        <p class="member-name-english bold purple">Shengzhao Xu</p>
+                        <p class="member-name-chinese bold purple">
+                        许晟钊
+
+                        </p>
+                    </li>
+
+
+               </ul>
+                <div class="clearboth"></div>
+            </article>
+
+
+        </section>
+        <div class="clearboth"></div>
+    <!--底部-->
+    <footer class="page-footer">
+        <p class="address">No.22 Hankou Road, Nanjing 210093, China.</p>
+        <p class="address">Tel: +86-(0)25-83687822</p>
+        <p class="address">Fax: +86-(0)25-83595535</p>
+        <p class="address">Email: jiansun@nju.edu.cn</p>
+    </footer>
+<button id="go-top"></button>
+
+</div>
+
+
+    <script src="static/js/jquery-3.1.0.min.js"></script>
+    <script src="static/js/knockout-3.4.0.js"></script>
+    <script src="static/js/ko-people.js"></script>
+    <script src="static/js/basic.js"></script>
+
+</body>
+</html>

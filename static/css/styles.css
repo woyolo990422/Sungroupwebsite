@@ -1,0 +1,1340 @@
+﻿/* 声明 WebFont */
+@font-face {
+    font-family: 'futura';
+    src: url('../font/futura.eot');
+    src:
+    /* 此行是为了获取IE嵌入权限 */
+    url('../font/futura.eot') format('embedded-opentype'),
+    /* 此行是为了嵌入正常ttf字体文件，供大多数浏览器使用 */
+    url('../font/futura.ttf') format('truetype');
+}
+
+/* reset，使各大浏览器显示效果一致 */
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+address,
+code,
+em,
+img,
+strong,
+b,
+u,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+menu,
+nav,
+section,
+time,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+menu,
+nav,
+section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol,
+ul,
+li {
+    list-style: none;
+    line-height: normal;
+}
+blockquote,
+q {
+    quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+a {
+    color: #797979;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #c8b7a6;
+}
+
+.clearboth {
+    clear: both;
+}
+
+html {
+    height: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+body {
+    min-height: 100%;
+    position: relative;
+    padding-bottom: 9rem;
+}
+
+html,
+body,
+section,
+.container {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #f0f0f0;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.container {
+    display: none;
+}
+
+#loading {
+    width: 40px;
+    height: 40px;
+    background-color: #758d71;
+
+    margin: 100px auto;
+    -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
+    animation: sk-rotateplane 1.2s infinite ease-in-out;
+}
+
+@-webkit-keyframes sk-rotateplane {
+    0% { -webkit-transform: perspective(120px) }
+    50% { -webkit-transform: perspective(120px) rotateY(180deg) }
+    100% { -webkit-transform: perspective(120px) rotateY(180deg)  rotateX(180deg) }
+}
+
+@keyframes sk-rotateplane {
+    0% {
+        transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+        -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg)
+    } 50% {
+        transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+        -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg)
+    } 100% {
+        transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+        -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    }
+}
+
+h1,h2,h3,h4,h5{
+    font-weight: bold;
+    color: #758d71;
+}
+h1{
+    font-size: 2.6em;
+    line-height: 2.45em;
+}
+h2{
+    font-size: 2.1em;
+    line-height: 1.9em;
+}
+h3{
+    font-size: 1.8em;
+    line-height: 1.65em;
+}
+h4{
+    font-size: 1.65em;
+    line-height: 1.4em;
+}
+h5{
+    font-size: 1.4em;
+    line-height: 1.25em;
+}
+
+p {
+    color: #22132d;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.page-header {
+    border-bottom: 2px solid #758d71;
+}
+
+.lab-title {
+    padding-left: 10px;
+    font-family: 'futura', Helvetica, Arial, sans-serif;
+    font-weight: bold;
+}
+
+.index-link {
+    color: #758d71;
+}
+
+#hamburger {
+    width: 30px;
+    height: 30px;
+    border: none;
+    padding: 0;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url('../image/hamburger.png');
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    z-index: 10;
+    position: fixed;
+    right: 1em;
+    top: 35px;
+}
+
+.navigation {
+    width: 100%;
+    text-align: center;
+    background-color: #758d71;
+    z-index: 10;
+    position: fixed;
+    opacity: 0.8;
+    /* This trasform moves the drawer off canvas. */
+    -webkit-transform: translate(-100%, 0);
+    -ms-transform: translate(-100%, 0);
+    transform: translate(-100%, 0);
+    /* Optionally, we animate the drawer. */
+    transition: transform 0.3s ease;
+}
+
+.open {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+}
+
+.nav-li {
+    font-size: 24px;
+    color: #f0f0f0;
+    padding: 15px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.nav-li:last-child {
+    border-bottom: none;
+}
+
+.navlist-item {
+    color: #f0f0f0;
+}
+
+.intro {
+    margin: 30px auto;
+    padding: 0 10px;
+    text-align: justify;
+    font-size: 16px;
+    line-height: 25px;
+    border-left: 5px solid #758d71;
+}
+
+.page-footer {
+    width: 100%;
+    background-color: #758d71;
+    margin: 20px auto 0 auto;
+    padding: 20px 0;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+}
+
+.address {
+    color: #c8b7a6;
+    margin-bottom: 3px; /* 调整元素间的间距 */
+}
+
+.footer-table {
+    margin: 0 auto;
+}
+
+.footer-item {
+    padding: 0 15px ;
+}
+
+#footer-mid-item {
+    border-left: 1px solid #c8b7a6;
+    border-right: 1px solid #c8b7a6;
+}
+
+.lab-website {
+    display: block;
+    margin: 10px 0;
+}
+
+#go-top {
+    visibility: hidden;
+    width: 50px;
+    height: 50px;
+    border: none;
+    padding: 0;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url('../image/top.png');
+    background-repeat: no-repeat;
+    background-size: 50px 50px;
+    z-index: 10;
+    opacity: 0.5;
+    position: fixed;
+    right: 1em;
+    bottom: 1em;
+}
+
+#go-top:hover {
+    opacity: 1;
+}
+
+@media screen and (min-width: 720px) {
+    #hamburger {
+        display: none;
+    }
+
+    .navigation {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+        position: static;
+        opacity: 1;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: space-between;
+    }
+
+    .nav-li {
+        border-bottom: none;
+    }
+
+    .navlist-item {
+        padding: 0 8px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .page-header,
+    .navigation,
+    .main-content {
+        width: 1200px;
+        margin: 0 auto;
+    }
+
+    .navlist-item {
+        padding: 0 30px;
+    }
+}
+
+.beta {
+    font-size: 14px;
+    font-weight: normal;
+    padding-left: 5px;
+}
+
+/* 为iphone和ipod设置，隐藏video的控制按钮 */
+video::-webkit-media-controls-play-button,
+video::-webkit-media-controls-start-playback-button {
+    opacity: 0;
+    pointer-events: none;
+    width: 5px;
+}
+
+.nav-active {
+    color: #c8b7a6;
+}
+
+/* index page */
+.intro-main {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-around;
+}
+
+.intro-achievements {
+    max-width: 350px;
+    text-align: center;
+    box-shadow: 0 0 50px #999;
+    margin: 0 auto 20px auto;
+}
+
+.achievements-title {
+    overflow: hidden; /*溢出截取*/
+    text-overflow: ellipsis; /*省略超出部分*/
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.achievement-link {
+    color: #758d71;
+}
+
+.main-images {
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+.abstract {
+    padding: 10px 15px;
+    text-align: justify;
+    line-height: 25px;
+}
+
+/* research page */
+.main-body {
+    text-align: center;
+}
+
+.achievements-title-list {
+    margin-bottom: 30px;
+}
+
+.achievement-title-item {
+    width: 100%;
+    display: inline-block;
+    padding: 15px;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 20px;
+    font-weight: bold;
+    color: #f0f0f0;
+    background-color: #758d71;
+}
+
+.achievement-title-item:hover {
+    color: #c8b7a6;
+    cursor: pointer;
+}
+
+.selected {
+    color: #758d71;
+    background-color: rgba(187, 48, 215, 0.2);
+    border-bottom: none;
+    box-shadow: 0 5px 5px 0 #758d71;
+    transition: all 0.3s ease;
+}
+
+.achievement-details {
+    box-shadow: 0 0 50px #999;
+    transition: opacity 0.2s ease;
+}
+
+.full-title {
+    padding: 15px 0;
+}
+
+.main-images {
+    width: 100%;
+    max-width: 388px;
+    padding-bottom: 10px;
+}
+
+.description {
+    text-align: left;
+}
+
+.portion {
+    line-height: 1.5em;
+    padding: 10px;
+    text-align: justify;
+}
+
+.paper-link {
+    color: #758d71;
+}
+
+.indices-list {
+    list-style: disc inside none;
+    border-left: 5px solid #758d71;
+    padding-left: 10px;
+}
+
+.research-item-name {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.indices-item {
+    list-style: inherit;
+    line-height: 1.5em;
+}
+
+.item-title {
+    text-align: left;
+}
+
+.inside-list {
+    list-style: circle inside none;
+    padding-left: 10px;
+}
+
+.inside-item {
+    list-style: inherit;
+    line-height: 1.5em;
+}
+
+@media screen and (min-width: 500px) {
+    .achievements-title-list {
+        display: flex;
+        justify-content: space-between; /* 自适应调整间距 */
+        align-items: center; /* 垂直居中 */
+    }
+
+    .achievement-title-item {
+        flex: 1; /* 让每个元素自适应宽度 */
+        margin: 0 10px; /* 设置元素之间的间距 */
+    }
+}
+
+/* research页面的子页面 */
+.research-item-container {
+  margin: 20px 10px;
+}
+
+.research-video {
+  display: block;
+  width: 100%;
+  max-width: 540px;
+  margin: 20px auto;
+}
+
+/* publication page */
+/* 年份导航条 */
+.timeline {
+    width: 100%;
+    background: -prefix-radial-gradient(#999 10%, #f0f0f0);
+    background: radial-gradient(#999 10%, #f0f0f0);
+}
+
+/* 年份导航条在页面向下滚动时，固定在屏幕头部 */
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    box-shadow: 0 0 50px #999;
+    z-index: 1;
+}
+
+/* 当导航条变为fixed时，用这个占位 */
+.occupy {
+    width: 1px;
+    height: 56px;
+    display: none;
+}
+
+.slick-nav {
+    width: calc(100% - 50px);
+    padding: 20px 0 1px 0;
+    text-align: center;
+    position: relative;
+    opacity: 0.8;
+}
+
+.slick-nav:hover {
+    opacity: 1;
+}
+
+.slick-list {
+    border-bottom: 1px dashed #758d71;
+    height: 35px;
+}
+
+.slick-item {
+    height: 18px;
+}
+
+.slick-link {
+    position: relative;
+    display: inline-block;
+}
+
+.slick-link::after {
+    position: absolute;
+    content: '';
+    width: 5px;
+    height: 5px;
+    background-color: #c8b7a6;
+    top: 29px;
+    left: calc(50% - 5px);
+}
+
+.slick-prev:before, .slick-next:before {
+    color: #758d71;
+}
+
+.publication-main-content {
+    position: relative;
+}
+
+/* 时间轴背景竖线 */
+.publication-main-content::before {
+    content: '';
+    position: absolute;
+    left: 18px;
+    height: 100%;
+    width: 4px;
+    background-color: #758d71;
+    opacity: 0.3;
+}
+
+.year-collection {
+    box-shadow: 0 0 50px #999;
+    margin-bottom: 15px;
+    padding: 10px;
+    position: relative;
+    padding-left: 40px;
+}
+
+.year-collection::before {
+    position: absolute;
+    content: '';
+    top: 26px;
+    left: 11px;
+    width: 18px;
+    height: 18px;
+    background-color: #c8b7a6;
+    border-radius: 50%;
+}
+
+.year {
+    position: absolute;
+    top: 18px;
+    left: 50px;
+    transition: all 0.5s ease;
+}
+
+.year:hover {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    color: #c8b7a6;
+    cursor: pointer;
+}
+
+/* 当点击年度导航条中的年份链接时，用此暗锚修复内容与导航条重叠的问题
+segmentfault链接：https://segmentfault.com/q/1010000000124208 */
+.target-fix {
+    position: relative;
+    top: -56px;
+    display: block;
+    height: 0;
+    /*chrome doesn't recognize the anchor if overflow is hidden.*/
+    /*overflow: hidden;*/
+}
+
+.current-year {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    color: #c8b7a6;
+    cursor: pointer;
+}
+
+.paper-list {
+    margin-top: 55px;
+    list-style: disc inside none;
+    text-align: justify;
+}
+
+.paper {
+    list-style: inherit;
+    line-height: 1.5em;
+    padding: 10px 0;
+}
+
+.paper-link {
+    text-decoration: underline;
+    color: #8fb189;
+    font-size: 18px;
+    font-weight: bold;
+
+}
+
+@media screen and (min-width: 1200px) {
+    .timeline {
+        width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+/* 以下代码参考自https://codyhouse.co/gem/vertical-timeline/，
+目的是加载publication每年的内容时，有个动画效果 */
+.is-hidden {
+    visibility: hidden;
+}
+
+.bounce-in {
+    visibility: visible;
+    -webkit-animation: cd-bounce-1 0.6s;
+    -moz-animation: cd-bounce-1 0.6s;
+    animation: cd-bounce-1 0.6s;
+}
+
+@-webkit-keyframes cd-bounce-1 {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(0.8);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+    }
+}
+@-moz-keyframes cd-bounce-1 {
+    0% {
+        opacity: 0;
+        -moz-transform: scale(0.8);
+    }
+
+    100% {
+        -moz-transform: scale(1);
+    }
+}
+@keyframes cd-bounce-1 {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(0.8);
+        -moz-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+        -o-transform: scale(0.8);
+        transform: scale(0.8);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+/* pepople page */
+.entypo-globe:before {
+    content: '\1F30E';
+    color: #758d71;
+}
+
+.entypo-users:before {
+    content: '\1f465';
+    color: #758d71;
+}
+
+img {
+    max-width: 100%;
+}
+
+.people-main-content {
+    margin-top: 0;
+}
+
+.card {
+    box-shadow: 0 0 50px #999;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.boss {
+    padding-top: 5px;
+}
+
+#boss-img {
+    border-radius: 50%;
+    width: 200px;
+    margin: 10px 0;
+}
+
+.boss-name-chinese {
+    font-family: 'Microsoft YaHei', '微软雅黑', 'Hiragino Sans GB', '冬青黑体',  sans-serif;
+}
+
+#boss-biography {
+    display: block;
+    margin: 10px auto;
+    width: 120px;
+    background-color: #758d71;
+    color: #f0f0f0;
+    box-shadow: 0 0 50px #999;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+}
+
+#boss-biography:hover {
+    color: #c8b7a6;
+}
+
+.boss-contact {
+    text-align: left;
+    padding-left: 15px;
+    padding-bottom: 15px;
+}
+
+.purple {
+    color: #758d71;
+}
+
+.boss-contact-head {
+    padding: 15px;
+    border-top: 1px solid #758d71;
+    text-align: left;
+}
+
+.boss-contact-item {
+    padding: 3px 20px;
+}
+
+.boss-contact-link {
+    color: #22132d;
+    text-decoration: underline;
+}
+
+.degree {
+    text-align: left;
+    padding: 15px 10px;
+}
+
+.member-item {
+    margin-bottom: 15px;
+    padding: 15px 0;
+}
+
+.menber-img {
+    border-radius: 50%;
+    width: 150px;
+}
+
+.alumni {
+    text-decoration: underline;
+}
+
+.alumni:hover {
+    cursor: pointer;
+    color: #c8b7a6;
+}
+
+/* pop up box */
+#overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1001;
+    transition: all 0.3s ease;
+}
+
+/* pop up box */
+#alumni-box {
+    position: fixed;
+    top: calc(25% + 30px);
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 50%;
+    background-color: #f0f0f0;
+    z-index: 1002;
+    overflow: auto;
+    padding-top: 20px;
+    margin: auto;
+    -webkit-transition: opacity 0.3s ease;
+    -moz-transition: opacity 0.3s ease;
+    -ms-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+}
+
+#alumni-header {
+    width: 100%;
+    height: 30px;
+    background-color: #758d71;
+    position: fixed;
+    top: 25%;
+    z-index: 1003;
+    margin: auto;
+    left: 0;
+    right: 0;
+    -webkit-transition: opacity 0.3s ease;
+    -moz-transition: opacity 0.3s ease;
+    -ms-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+}
+
+#close-alumni {
+    font-size: 15px;
+    position: absolute;
+    right: 10px;
+    top: 5px;
+}
+
+#alumni-body {
+    text-align: left;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.alumni-school {
+    text-align: center;
+}
+
+.alumni-degree {
+    margin: 15px;
+    width: 200px;
+}
+
+.alumni-member-list {
+    height: 128px;
+    overflow: auto;
+}
+
+.nooverflow {
+    overflow: hidden;
+    padding-right: 16px;
+}
+
+.beneath {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* responsive design */
+@media screen and (min-width: 480px) {
+    .boss,
+    .member-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #boss-img-area {
+        width: 45%;
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .boss-info {
+        width: 50%;
+    }
+
+    .boss-more {
+        width: 50%;
+    }
+
+    .boss-contact-head {
+        border-top: none;
+    }
+
+    .boss-contact {
+        width: 100%;
+    }
+
+    .boss-contact-head {
+        display: block;
+        width: 100%;
+    }
+
+    .member-list {
+        justify-content: space-around;
+    }
+
+    .member-item {
+        margin: 10px;
+        padding: 10px;
+    }
+}
+
+@media screen and (min-width: 520px) {
+    #alumni-box {
+        width: 520px;
+    }
+
+    #alumni-header {
+        width: 520px;
+    }
+}
+
+@media screen and (min-width: 720px) {
+    .boss-info {
+        width: 40%;
+    }
+
+    .boss-more {
+        width: 60%;
+    }
+}
+
+@media screen and (min-width: 1080px) {
+    .boss-contact {
+        padding-left: 5%;
+    }
+
+    .member-list {
+        justify-content: flex-start;
+    }
+
+    .member-item {
+        padding: 15px;
+    }
+}
+
+/* sctructure page */
+#research-orientation {
+    text-align: center;
+}
+
+.orientation-item {
+    width: 100%;
+    display: inline-block;
+    padding: 15px;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 20px;
+    font-weight: bold;
+    color: #f0f0f0;
+    background-color: #758d71;
+}
+
+.orientation-item:hover {
+    color: #c8b7a6;
+    cursor: pointer;
+}
+
+.selected {
+    color: #758d71;
+    background-color: rgba(116, 52, 129, 0.2);
+    border-bottom: none;
+    box-shadow: 0 5px 5px 0 #758d71;
+    transition: all 0.3s ease;
+}
+
+.current-orientation {
+    transition: opacity 0.2s ease;
+}
+
+.category-item {
+    box-shadow: 0 0 50px #999;
+    margin-bottom: 15px;
+}
+
+.category-name {
+    padding: 15px;
+}
+
+.sub-category-list {
+    padding: 0 15px;
+}
+
+.vice-name {
+    padding-left: 15px;
+}
+
+.item-info {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item-content {
+    width: 145px;
+    text-align: center;
+    display: inline-block;
+    margin-bottom: 20px;
+    vertical-align: top;
+}
+
+.item-name {
+    line-height: 56px;
+}
+
+.item-name-inside {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+}
+
+.item-thumbnail:hover {
+    cursor: pointer;
+}
+
+/* 弹出对话框相关元素设置 */
+#current-structure {
+    margin-bottom: 50px;
+}
+
+#overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1001;
+    transition: all 0.3s ease;
+}
+
+.beneath {
+    opacity: 0;
+    visibility: hidden;
+}
+
+#popup-header {
+    width: 100%;
+    height: 30px;
+    background-color: #758d71;
+    margin-bottom: 10px;
+}
+
+#closeit {
+    float: right;
+    font-size: 15px;
+    position: relative;
+    right: 10px;
+    top: 5px;
+}
+
+#closeit:hover {
+    cursor: pointer;
+}
+
+#popup-structure {
+    position: fixed;
+    top: calc(15% + 10px);
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-width: 600px;
+    height: 70%;
+    background-color: #f0f0f0;
+    z-index: 1002;
+    margin: auto;
+    -webkit-transition: opacity 0.3s ease;
+    -moz-transition: opacity 0.3s ease;
+    -ms-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+}
+
+#popup-body {
+    padding: 10px;
+    height: calc(100% - 40px);
+    overflow: auto;
+    text-align: center;
+}
+
+.large-img {
+    margin: 10px 0;
+    max-width: 100%;
+}
+
+.describtion {
+    text-align: left;
+    padding: 5px 30px;
+    line-height: 20px;
+}
+
+/* 禁止窗口弹出后，滚动页面 */
+.nooverflow {
+    overflow: hidden;
+    padding-right: 16px;
+}
+
+@media screen and (max-width: 620px) {
+    .item-info {
+        justify-content: space-around;
+    }
+}
+
+@media screen and (min-width: 720px) {
+    #research-orientation {
+        height: 76px;
+    }
+
+    .orientation-item {
+        width: calc(24% - 4px);
+        height: 100%;
+        line-height: 15px;
+        vertical-align: middle;
+    }
+
+    .orientation-item:after{
+        display: inline-block;
+        width: 0;
+        height: 100%;
+        vertical-align: middle;
+        content: '';
+    }
+}
+
+/* lab event page */
+.lab-event-intro {
+    text-align: center;
+}
+
+.scholl-logo {
+    width: calc(50% - 5px);
+    max-width: 200px;
+}
+
+#tsinghua-event-tags {
+    text-align: center;
+}
+
+.event-title {
+    width: 100%;
+    display: inline-block;
+    padding: 15px;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 20px;
+    font-weight: bold;
+    color: #f0f0f0;
+    background-color: #758d71;
+}
+
+.event-title:hover {
+    color: #c8b7a6;
+    cursor: pointer;
+}
+
+.selected {
+    color: #758d71;
+    background-color: rgba(116, 52, 129, 0.2);
+    border-bottom: none;
+    box-shadow: 0 5px 5px 0 #758d71;
+    transition: all 0.3s ease;
+}
+
+.current-event-item {
+    padding: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 0 50px #999;
+}
+
+.name {
+    padding: 10px 0;
+}
+
+.awards {
+    list-style: disc inside none;
+}
+
+.award {
+    list-style: inherit;
+    line-height: 1.5em;
+    text-align: justify;
+}
+
+.happy-pics {
+    display: block;
+    max-width: 100%;
+    margin: 20px auto;
+    box-shadow: 0 0 50px #999;
+}
+
+@media screen and (min-width: 610px) {
+    .event-title {
+        width: 30%;
+    }
+}
+
+@media screen and (min-width: 720px) {
+    .happy-pics {
+        display: inline-block;
+        width: calc(50% - 42.5px);
+        margin: 20px;
+    }
+}
+
+/* 404 page */
+.error-main-content {
+    text-align: center;
+    padding-top: 30px;
+}
+
+.error-img {
+    width: 100%;
+    max-width: 400px;
+}
+
+@media screen and (min-width: 720px) {
+    .error-main-content {
+        padding-top: 180px;
+    }
+}
+
+
+.image-container {
+    display: flex;
+    justify-content: center;  /* 水平居中 */
+    gap: 15px;                /* 图片间距替代 margin-left/margin-right */
+  }
