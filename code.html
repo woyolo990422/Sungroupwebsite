@@ -1,0 +1,107 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117830668-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-117830668-1');
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 这一条针对IE。使用IE最高版本渲染页面 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <link rel="shortcut icon" href="/static/favicon.ico">
+    <!--[if IE 9]>
+    <link rel="stylesheet" href="/static/css/styles-ie.css">
+    <![endif]-->
+
+    <link rel="stylesheet" href="static/css/slick.css">
+    <link rel="stylesheet" href="static/css/slick-theme.css">
+    <link rel="stylesheet" href="static/css/styles.css">
+
+</head>
+
+<body>
+    <div id="loading"></div>
+    <!--主页-->
+    <div class="container">
+        <header class="page-header">
+    <h1 class="lab-title"><a class="index-link" href="index.html">The Sun Group</a></h1>
+    <button id="hamburger" data-bind="click: toggleNav"></button>
+    <div class="clearboth"></div>
+    <!--导航栏-->
+
+
+
+    <ul class="navigation" data-bind="css: {open: navStatus() > 0}">
+
+        <li class="nav-li">
+            <a href="index.html" class="navlist-item ">Home</a>
+        </li>
+
+        <li class="nav-li">
+            <a href="research.html" class="navlist-item ">Research</a>
+        </li>
+
+        <li class="nav-li">
+            <a href="people.html" class="navlist-item ">People</a>
+        </li>
+
+        <li class="nav-li">
+            <a href="publications.html" class="navlist-item ">Publications</a>
+        </li>
+
+        <li class="nav-li">
+            <a href="" class="navlist-item nav-active">Code</a>
+        </li>
+
+        <li class="nav-li">
+            <a href="news.html" class="navlist-item ">News</a>
+        </li>
+
+    </ul>
+
+
+</header>
+
+
+        <section class="main-content">
+            <div class="intro">
+                <p>Our development code is as follows:</p>
+            </div>
+            <div class="main-body">
+                <ul class="achievements-title-list" data-bind="foreach: achievementsList">
+                    <li class="achievement-title-item" data-bind="text: short, click: $parent.updateAchievement, css: {selected: short === $parent.currentAchievement().short}"></li>
+                </ul>
+                <article class="achievement-details" data-bind="with: currentAchievement">
+                    <h3 class="full-title" data-bind="html: title"></h3>
+                    <div data-bind="html: mediaCode"></div>
+                    <div class="description" data-bind="foreach: details">
+                        <p class="portion" data-bind="html: $data"></p>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <div class="clearboth"></div>
+        <!--底部-->
+        <footer class="page-footer">
+            <p class="address">No.22 Hankou Road, Nanjing 210093, China.</p>
+            <p class="address">Tel: +86-(0)25-83687822</p>
+            <p class="address">Fax: +86-(0)25-83595535</p>
+            <p class="address">Email: jiansun@nju.edu.cn</p>
+        </footer>
+<button id="go-top"></button>
+</div>
+
+    <script src="static/js/jquery-3.1.0.min.js"></script>
+    <script src="static/js/knockout-3.4.0.js"></script>
+    <script src="static/js/ko-code.js"></script>
+    <script src="static/js/basic.js"></script>
+
+</body>
+</html>

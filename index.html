@@ -1,0 +1,102 @@
+﻿
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117830668-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-117830668-1');
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 这一条针对IE。使用IE最高版本渲染页面 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <link rel="shortcut icon" href="/static/favicon.ico">
+    <!--[if IE 9]>
+    <link rel="stylesheet" href="/static/css/styles-ie.css">
+    <![endif]-->
+
+    <link rel="stylesheet" href="static/css/styles.css">
+
+</head>
+
+<body>
+	<div id="loading"></div>
+	<!--主页-->
+	<div class="container">
+        <header class="page-header">
+    <!--顶部主标题-->
+    <h1 class="lab-title"><a class="index-link" href="">The Sun Group</a></h1>
+    <button id="hamburger" data-bind="click: toggleNav"></button>
+    <div class="clearboth"></div>
+    <!--导航栏-->
+
+
+
+<ul class="navigation" data-bind="css: {open: navStatus() > 0}">
+
+    <li class="nav-li">
+        <a href="" class="navlist-item nav-active">Home</a>
+    </li>
+
+    <li class="nav-li">
+        <a href="research.html" class="navlist-item ">Research</a>
+    </li>
+
+    <li class="nav-li">
+        <a href="people.html" class="navlist-item ">People</a>
+    </li>
+
+    <li class="nav-li">
+        <a href="publications.html" class="navlist-item ">Publications</a>
+    </li>
+
+    <li class="nav-li">
+        <a href="code.html" class="navlist-item ">Code</a>
+    </li>
+
+    <li class="nav-li">
+        <a href="news.html" class="navlist-item ">News</a>
+    </li>
+
+</ul>
+</header>
+		<!--正文部分-->
+		<section class="main-content">
+			<!--简介-->
+			<div class="intro">
+				<p>Prof. Jian Sun’s research group has long been dedicated to developing and applying machine learning-driven computational methods for material simulations, providing fundamental frameworks and tools for condensed matter physics and materials science research. In recent years, we have particularly focused on interdisciplinary fields including high-pressure physics, materials design, and planetary science, investigating material behaviors and properties under extreme conditions. Our work aims to design novel materials with superior performance while expanding the boundaries of human understanding of matter under extreme environments.</p>
+			</div>
+			<!--研究成果简介-->
+			<div class="intro-main" data-bind="foreach: achievementsList">
+				<article class="intro-achievements">
+                    <img class="main-images" data-bind="attr: {src: imgSrc, alt: title}">
+					<h2 class="achievements-title"><a class="achievement-link"></a></h2>
+
+				</article>
+			</div>
+		</section>
+		<div class="clearboth"></div>
+        <!--底部-->
+
+<footer class="page-footer">
+    <p class="address">No.22 Hankou Road, Nanjing 210093, China.</p>
+    <p class="address">Tel: +86-(0)25-83687822</p>
+    <p class="address">Fax: +86-(0)25-83595535</p>
+    <p class="address">Email: jiansun@nju.edu.cn</p>
+</footer>
+<button id="go-top"></button>
+</div>
+
+    <script src="static/js/jquery-3.1.0.min.js"></script>
+    <script src="static/js/knockout-3.4.0.js"></script>
+    <script src="static/js/ko-index.js"></script>
+    <script src="static/js/basic.js"></script>
+
+</body>
+</html>
