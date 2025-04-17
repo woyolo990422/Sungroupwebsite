@@ -795,7 +795,7 @@ img {
     max-width: 100%;
 }
 
-.people-main-content {
+.Team-main-content {
     margin-top: 0;
 }
 
@@ -872,6 +872,7 @@ img {
 
 .menber-img {
     border-radius: 50%;
+    height: 150px;
     width: 150px;
 }
 

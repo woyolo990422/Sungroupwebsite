@@ -36,7 +36,7 @@ var ViewModel = function() {
         '<div><img style="width: 55%;margin-right: 20px;" src="static/image/HotPP1.png"><img style="width: 35%" src="static/image/HotPP2.png"></div>',
         details: [
         '<h3 class="item-title portion" id="spl-item1">Introduction</h3><p class="portion">The higher-order tensor message-passing interatomic potential function, HotPP, is an E(n)-equivariant message-passing neural network capable of extending Cartesian tensor embeddings and messages to arbitrary orders. It supports the calculation of potential energy surfaces, electric dipole moments, and polarizabilities. Additionally, it provides interfaces with commonly used software such as ASE and LAMMPS, making it applicable for computing phonon spectra, infrared spectra, and Raman spectra.</p>',
-        '<p class=\"portion\">For more details and access to the HotPP, visit the <a href=\"https://github.com/your-repository/HotPP\" target=\"_blank\"> code repository</a>.</p>'
+        '<p class=\"portion\">For more details and access to the HotPP, visit the <a href=\"https://gitlab.com/bigd4/hotpp\" target=\"_blank\"> code repository</a>.</p>'
 
     ]
       },
