@@ -31,7 +31,7 @@ var ViewModel = function() {
         mediaCode3:
         '<div><img style="width: 42%;margin-right: 20px;" src="static/image/gpumd.png"><img style="width: 45%;" src="static/image/nep.png"></div>',
         details1: [
-        '<h3 class="item-title portion" id="spl-item1">Introduction</h3><p class="portion">The higher-order tensor message-passing interatomic potential function, HotPP, is an E(n)-equivariant message-passing neural network capable of extending Cartesian tensor embeddings and messages to arbitrary orders. It supports the calculation of potential energy surfaces, electric dipole moments, and polarizabilities. Additionally, it provides interfaces with commonly used software such as ASE and LAMMPS, making it applicable for computing phonon spectra, infrared spectra, and Raman spectra.</p>',
+        '<h3 class="item-title portion" id="spl-item1">Introduction</h3><p class="portion">MAGUS is a machine learning and graph theory assisted crystal structure prediction method developed by Prof. Jian Sun\'s group at the School of Physics at Nanjing University. The programming languages are mainly Python and C++ and it is built as a pip installable package. Users can use just a few commands to install the package. MAGUS has also the advantage of high modularity and extensibility. All source codes are transparent to users after installation, and users can modify particular parts according to their needs.</p>',
         '<p class=\"portion\">For more details and access to the Magus, visit the <a href=\"https://gitlab.com/bigd4/magus" target=\"_blank\"> code repository</a>.</p>'
 
     ],
