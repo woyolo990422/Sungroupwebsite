@@ -75,13 +75,23 @@
                 <p>Our development code is as follows:</p>
             </div>
             <div class="main-body">
-                <ul class="achievements-title-list" data-bind="foreach: achievementsList">
+                <!-- <ul class="achievements-title-list" data-bind="foreach: achievementsList">
                     <li class="achievement-title-item" data-bind="text: short, click: $parent.updateAchievement, css: {selected: short === $parent.currentAchievement().short}"></li>
-                </ul>
+                </ul> -->
                 <article class="achievement-details" data-bind="with: currentAchievement">
-                    <h3 class="full-title" data-bind="html: title"></h3>
-                    <div data-bind="html: mediaCode"></div>
-                    <div class="description" data-bind="foreach: details">
+                    <h3 class="full-title" data-bind="html: title1"></h3>
+                    <div data-bind="html: mediaCode1"></div>
+                    <div class="description" data-bind="foreach: details1">
+                        <p class="portion" data-bind="html: $data"></p>
+                    </div>
+                    <h3 class="full-title" data-bind="html: title2"></h3>
+                    <div data-bind="html: mediaCode2"></div>
+                    <div class="description" data-bind="foreach: details2">
+                        <p class="portion" data-bind="html: $data"></p>
+                    </div>
+                    <h3 class="full-title" data-bind="html: title3"></h3>
+                    <div data-bind="html: mediaCode3"></div>
+                    <div class="description" data-bind="foreach: details3">
                         <p class="portion" data-bind="html: $data"></p>
                     </div>
                 </article>
